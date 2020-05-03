@@ -1,0 +1,29 @@
+version: '3.3'
+
+services:
+
+  web:
+    build:
+      dockerfile: ./docker/web.dev.dockerfile
+    depends_on:
+      - webpack
+
+  sidekiq:
+    build:
+      dockerfile: ./docker/web.dev.dockerfile
+
+  cable:
+    build:
+      dockerfile: ./docker/web.dev.dockerfile
+
+  webpack:
+    build:
+      context: .
+      dockerfile: ./docker/web.dev.dockerfile
+    env_file: ./.env
+    command:  ./docker/scripts/start-webpack-dev.sh
+    ports:
+      - ${WEBPACK_PORT?}:${WEBPACK_PORT?}
+    volumes:
+      - bundle_cache:/bundle
+      - .:/noisu
