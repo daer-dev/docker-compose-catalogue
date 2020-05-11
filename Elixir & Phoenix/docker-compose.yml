@@ -9,8 +9,6 @@ services:
     build:
       context: .
       dockerfile: ./docker/web.dockerfile
-    labels:
-      - twenix
     volumes:
       - type: bind
         source: .
