@@ -10,4 +10,4 @@ Look for a folder with the name similar to the stack you use, copy its contents 
 
 ## Acknowledgments
 
-- Gatsby config based in the following article: https://medium.com/ultralight-io/getting-gatsby-to-run-on-docker-compose-6bf3b0d97efb
+- Initial Gatsby config based on the following article: https://medium.com/ultralight-io/getting-gatsby-to-run-on-docker-compose-6bf3b0d97efb
